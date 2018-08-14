@@ -110,7 +110,7 @@ const composition = {
             "function": {
                 "exec": {
                     "kind": "nodejs:default",
-                    "code": "({ params, result }) => ({ Body: result.translations[0], number: params.number })"
+                    "code": "({ params, result }) => ({ Body: result.translations[0].translation, number: params.number })"
                 }
             }
         },
