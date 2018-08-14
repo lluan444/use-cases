@@ -18,7 +18,7 @@ function en2shakespeare(params) {
   return new Promise(function (resolve, reject) {
     request(options, function (err, resp) {
       if (err) reject({error: err})
-      else resolve({translations: [resp.body.contents.translated]})
+      else resolve({translations: [{translation: resp.body.contents.translated}]})
     })
   })
 }
